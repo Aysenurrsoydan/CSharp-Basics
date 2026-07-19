@@ -4,22 +4,19 @@
     {
         static void Main(string[] args)
         {
-            
-            int sayi = 1;
-            int toplam = 0;
 
-            while (sayi != 0)
+            int password = 1234;
+            Console.WriteLine("Please enter your password: ");
+            int enteredPassword = int.Parse(Console.ReadLine());
+
+            while (enteredPassword != password)
             {
-                Console.WriteLine("Please enter a number: ");
-                sayi = Convert.ToInt32(Console.ReadLine());
-                
-                if (sayi != 0)
-                {
-                    toplam += sayi;
-                }
+                Console.WriteLine("Incorrect password, please try again: ");
+                enteredPassword = int.Parse(Console.ReadLine());
             }
-            
-            Console.WriteLine("toplam: " + toplam);
+
+            Console.WriteLine("Correct password, login successful!");
+
 
 
 
