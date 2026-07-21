@@ -1,77 +1,58 @@
 ﻿namespace break_continue_exercise
-{   
+{
     internal class Program
     {
         static void Main(string[] args)
         {
-            int toplamTutar = 0;
-            Console.WriteLine("===== MENÜ =====");
-            
+            int totalAmount = 0;
+            Console.WriteLine("===== MENU =====");
+
             while (true)
             {
-                Console.WriteLine("1-pizza:250 TL");
-                Console.WriteLine("2-hamburger:150 TL");
-                Console.WriteLine("3-makarna:100 TL");
-                Console.WriteLine("4-hesabı göster");
-                Console.WriteLine("5-çıkış");
-                Console.WriteLine("Lütfen bir seçim yapınız (1-5):");
-                int secim = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("1-Pizza: 250 TL");
+                Console.WriteLine("2-Burger: 150 TL");
+                Console.WriteLine("3-Pasta: 100 TL");
+                Console.WriteLine("4-Show Bill");
+                Console.WriteLine("5-Exit");
+                Console.WriteLine("Please make a choice (1-5):");
+                int choice = Convert.ToInt32(Console.ReadLine());
 
-                if (secim == 1)
+                if (choice == 1)
                 {
-                    Console.WriteLine("kaç adet pizza istiyorsunuz?");
-                    int adet = Convert.ToInt32(Console.ReadLine());
-                    toplamTutar += 250 * adet;
-                    Console.WriteLine(adet + " adet pizza eklendi");
+                    Console.WriteLine("How many pizzas would you like?");
+                    int quantity = Convert.ToInt32(Console.ReadLine());
+                    totalAmount += 250 * quantity;
+                    Console.WriteLine(quantity + " pizza(s) added");
                 }
-                else if (secim == 2)
+                else if (choice == 2)
                 {
-                    Console.WriteLine("kaç adet hamburger istiyorsunuz?");
-                    int adet = Convert.ToInt32(Console.ReadLine());
-                    toplamTutar += 150 * adet;
-                    Console.WriteLine(adet + " adet hamburger eklendi");
+                    Console.WriteLine("How many burgers would you like?");
+                    int quantity = Convert.ToInt32(Console.ReadLine());
+                    totalAmount += 150 * quantity;
+                    Console.WriteLine(quantity + " burger(s) added");
                 }
-                else if (secim == 3)
+                else if (choice == 3)
                 {
-                    Console.WriteLine("kaç adet makarna istiyorsunuz?");
-                    int adet = Convert.ToInt32(Console.ReadLine());
-                    toplamTutar += 100 * adet;
-                    Console.WriteLine(adet + " adet makarna eklendi");
-
+                    Console.WriteLine("How many orders of pasta would you like?");
+                    int quantity = Convert.ToInt32(Console.ReadLine());
+                    totalAmount += 100 * quantity;
+                    Console.WriteLine(quantity + " pasta(s) added");
                 }
-                else if (secim == 4)
+                else if (choice == 4)
                 {
-                    Console.WriteLine("Toplam tutar: " + toplamTutar + " TL");
+                    Console.WriteLine("Total amount: " + totalAmount + " TL");
                 }
-                else if (secim == 5)
+                else if (choice == 5)
                 {
-                    Console.WriteLine("Çıkış yapılıyor...");
+                    Console.WriteLine("Exiting...");
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Geçersiz seçim. Lütfen tekrar deneyin.");
+                    Console.WriteLine("Invalid choice. Please try again.");
                     continue;
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }
